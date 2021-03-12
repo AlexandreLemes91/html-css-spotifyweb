@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************************************************************
+MAIN 
+*************************************************************/
+main{
+    height: calc(100vh - 90px);
+}
+
+/************************************************************
+FOOTER 
+*************************************************************/
+footer.console{
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div{
+    background-color: rgba(100, 100, 100, .5);
+}
+
