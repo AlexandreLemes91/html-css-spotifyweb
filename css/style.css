@@ -17,14 +17,11 @@ body{
     width: 100vw;
 }
 
-.alit-cnt{
-    align-items: center;
-}
-
 li{
     list-style: none;
 }
-/* HOVER****** */
+
+/* HOVER *******************************/
 .li-become li{
     transition: 0.3s;
     cursor: pointer;
@@ -55,7 +52,27 @@ li{
     background-color: rgb(13, 230, 49);
 }
 
-/* TEXT */
+.li-short-borderB li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.li-short-borderB li::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: rgb(13, 230, 49);
+    margin-top: 2px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.li-short-borderB li:hover{
+    opacity: 1;
+}
+
+/* TEXT ******************************/
 h1,
 h2,
 h3,
@@ -63,6 +80,15 @@ h4,
 h5,
 h6{
     color: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.txt-center{
+    text-align: center;
 }
 
 .fw600{
@@ -73,12 +99,12 @@ h6{
     font-size: 0.6rem;
 }
 
-.fs0-9rem{
-    font-size: 0.9rem;
-}
-
 .fs0-8rem{
     font-size: 0.8rem;
+}
+
+.fs0-9rem{
+    font-size: 0.9rem;
 }
 
 .fs2rem{
@@ -112,10 +138,98 @@ nav img{
     width: 30px;
 }
 
+/************************************************************
+MAIN-CONTENT
+*************************************************************/
 .main-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
     background-color: rgb(20, 25, 34);
     height: 100%;
     flex-basis: calc(100vw - 230px);
+    align-items: center;
+    overflow-y: auto;
+}
+
+.link-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-list li{
+    padding: 10px;
+}
+
+/* MAIN CONTENT COL/CARD */
+.col{
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.main-content .cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col .card{
+    padding: 5px;
+    width: calc(100% / 6);
+    transition: 0.3s;
+}
+
+.cards .card-img{
+    position: relative;
+    margin-top: 20px;
+}
+
+.cards .card-img::after{
+    transition: 0.3s;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f144";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
+.cards .card:hover .card-img::after{
+    opacity: 1;
+}
+
+.cards .card:hover{
+    transform: scale(1.02);
+}
+
+.main-content .card-img img{
+    width: 100%; /* COME FARE MEGLIO??? */
+}
+
+.main-content .card h3{
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.main-content .col span{
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.artist .card-img{
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /************************************************************
