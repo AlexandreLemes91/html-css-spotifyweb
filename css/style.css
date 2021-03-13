@@ -24,6 +24,36 @@ body{
 li{
     list-style: none;
 }
+/* HOVER****** */
+.li-become li{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.become{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.become-white:hover{
+    color: white;
+}
+
+.li-become-white li:hover{
+    color: white;
+}
+
+.become-green:hover{
+    color: rgb(13, 230, 49);
+}
+
+.li-become-green li:hover{
+    color: rgb(13, 230, 49);
+}
+
+.become-bg-green:hover{
+    background-color: rgb(13, 230, 49);
+}
 
 /* TEXT */
 h1,
@@ -74,6 +104,14 @@ aside{
     flex-basis: 230px;
 }
 
+nav{
+    display: flex;
+}
+
+nav img{
+    width: 30px;
+}
+
 .main-content{
     background-color: rgb(20, 25, 34);
     height: 100%;
@@ -94,11 +132,6 @@ footer{
 }
 
 /* LEFT ****************************************** */
-.left{
-    display: flex;
-    justify-content: space-between;
-    flex-basis: 220px;
-}
 
 .current-song-album{
     max-width: 42px;
@@ -113,6 +146,7 @@ footer{
 
 .current-song{
     display: flex;
+    align-items: center;
 }
 
 .current-song-info{
@@ -122,21 +156,95 @@ footer{
     margin-left: 5px;
 }
 
-.left .list-icon{
-    display: flex;
+/* RIGHT ******************************************** */
+.volume{
+    width: 100%;
 }
 
-.left .list-icon ul{
-    display: flex;
+.bar.music-bar{
+    width: auto;/* PERCHE server per mantenere la barra dentro il div right?????????????????????????????????????????????????????? */
 }
 
-.left .list-icon li{
-    margin-left: 10px;
-}
-
-
+/* LEFT/RIGHT COM ******************************************/
+.left,
 .right{
-    margin-left: 40px;
+    display: flex;
+    flex-basis: 220px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-icon{
+    display: flex;
+    align-items: center;
+}
+
+.list-icon ul{
+    display: flex;
+}
+
+.left .list-icon li,
+.right .list-icon li{
+    transition: 0.3s;
+    margin: 0 5px;
 }
 
 /* CENTER ************************************************** */
+.center{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.center li{
+    margin: 0 10px;
+}
+
+.center li:nth-child(3){
+    margin: 0 20px;
+}
+
+.music-time{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.bar{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(113, 113, 113);
+    margin: 0 5px;
+}
+
+.bar-progression{
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} 
+
+.bar-progression::after{
+    content: "";
+    height: 6px;/* non posso mettere 100% widht, vi è un modo per far prendere width= height??? */
+    width: 6px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.bar:hover .bar-progression::after{
+    opacity: 1;
+}
+
