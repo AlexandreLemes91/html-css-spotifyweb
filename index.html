@@ -24,30 +24,71 @@
     
     <!-- MAIN ------------------------------------------------- -->
     <main>
-        <aside>
-            <nav>
-                <img src="./img/home.svg" alt="">
-                <img src="./img/logo.svg" alt="">
-                <img src="./img/search.svg" alt="">
-                <img src="./img/profile.svg" alt="">
-                <img src="./img/download.svg" alt="">
-                <img src="./img/libreria.svg" alt="">
-                <img src="./img/logo-small.svg" alt="">
-            </nav>
+        <!-- ASIDE -------------------------------------------- -->
+        <aside class="fs0-8rem fw600">
+            <!-- TOP SIDE -->
+            <div class="topside">
+                <div class="logo"><img src="./img/logo.svg" alt=""></div>
+                <nav>
+                    <ul class="aside-link li-img-link li-become li-become-white">
+                        <li>
+                            <div><img src="./img/home.svg" alt=""></div>
+                            Home
+                        </li>
+                        <li>
+                            <div><img src="./img/search.svg" alt=""></div>
+                            Cerca
+                        </li>
+                        <li>
+                            <div><img src="./img/libreria.svg" alt=""></div>
+                            La tua libreria
+                        </li>
+                    </ul>
+    
+                    <div class="playlist">
+                        <h3>PLAYLIST</h3>
+                        <h3 class="create-play become become-white"><button class="become">+</button> Crea Playlist</h3>
+                        <ul class="li-become li-become-white">
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- BOT-SIDE -->
+            <div class="bot-side">
+                <span class="download become become-white"><img src="./img/download.svg" alt=""> Installa app</span>
+                <h3 class="become" id="username"><span class="user-pic-container"><img src="./img/profile.svg" alt=""></span> Jhon Doe</h3>
+            </div>
+
         </aside>
 
         <!-- MAIN CONTENT --------------------------------------------- -->
+        
         <div class="main-content">
+            <!-- UPGRADE AD -->
+            <div class="upgrade">
+                <a href="">EFFETTUA L'UPGRADE</a>
+            </div>
+
             <!-- LINK LIST NAV -->
             <header class="link-list">
-                <ul class="li-short-borderB fw600 fs0-8rem li-become-white li-become">
-                    <li><a href="">IN EVIDENZA</a></li>
-                    <li><a href="">PODCAST</a></li>
-                    <li><a href="">CLASSIFICHE</a></li>
-                    <li><a href="">GENERI E MOOD</a></li>
-                    <li><a href="">NUOVE USCITE</a></li>
-                    <li><a href="">SCOPRI</a></li>
-                </ul>
+                <nav>
+                    <ul class="li-short-borderB fw600 fs0-8rem li-become-white li-become">
+                        <li><a href="">IN EVIDENZA</a></li>
+                        <li><a href="">PODCAST</a></li>
+                        <li><a href="">CLASSIFICHE</a></li>
+                        <li><a href="">GENERI E MOOD</a></li>
+                        <li><a href="">NUOVE USCITE</a></li>
+                        <li><a href="">SCOPRI</a></li>
+                    </ul>
+                </nav>
             </header>
 
             <!-- COL RECENTLY -->
@@ -163,6 +204,7 @@
             </div>
         </div>
 
+        <!-- CENTER -->
         <div class="center white">
             <ul class="list-icon li-become li-become-green">
                 <li><i class="fas fa-random"></i></li>
@@ -171,7 +213,7 @@
                 <li><i class="fas fa-step-forward"></i></li>
                 <li><i class="fas fa-redo-alt"></i></li>
             </ul>
-            <div class="music-time fs0-6rem">
+            <div class="music-time fs0-7rem">
                 <span>0:25</span>
                 <div class="bar">
                     <div class="bar-progression become become-bg-green"></div>
@@ -180,6 +222,7 @@
             </div>
         </div>
 
+        <!-- RIGHT -->
         <div class="right white">
             <div class="list-icon li-become li-become-green">
                 <ul>

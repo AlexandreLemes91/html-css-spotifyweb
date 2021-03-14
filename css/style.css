@@ -60,7 +60,7 @@ li{
 
 .li-short-borderB li::after{
     content: "";
-    width: 30px;
+    width: 40%;
     height: 3px;
     background-color: rgb(13, 230, 49);
     margin-top: 2px;
@@ -68,9 +68,11 @@ li{
     opacity: 0;
 }
 
-.li-short-borderB li:hover{
+.li-short-borderB li:hover::after{
     opacity: 1;
 }
+
+
 
 /* TEXT ******************************/
 h1,
@@ -95,8 +97,8 @@ a{
     font-weight: 600;
 }
 
-.fs0-6rem{
-    font-size: 0.6rem;
+.fs0-7rem{
+    font-size: 0.7rem;
 }
 
 .fs0-8rem{
@@ -124,24 +126,131 @@ main{
     height: calc(100vh - 90px);
 }
 
+
+/************************************************************
+ASIDE
+*************************************************************/
 aside{
     background-color: rgb(0, 0, 0);
     height: 100%;
     flex-basis: 230px;
-}
-
-nav{
+    overflow-y: auto;
     display: flex;
+    flex-direction: column;
 }
 
-nav img{
-    width: 30px;
+/* TOP SIDE */
+aside .logo{
+    padding: 18px;
+    padding-right: 75px;
+}
+
+.aside-link li{
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+    padding: 3px 0;
+    padding-left: 15px;
+}
+
+.aside-link li:hover{
+    border-color:  rgb(13, 230, 49);
+}
+
+.li-img-link li > div{
+    width: 25px;
+    margin-right: 5px;
+}
+
+.playlist{
+    padding: 20px 0 40px;
+    padding-left: 18px;
+}
+
+.playlist h3{
+    padding: 5px 0;
+}
+
+.create-play{
+    display: flex;
+    align-items: center;
+    color: rgb(113, 113, 113);
+}
+
+.playlist button{
+    border-radius: 0;
+    border: none;
+    background-color: rgb(163, 163, 163);
+    width: 38px;
+    height: 38px;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.playlist .create-play:hover button{
+    background-color: rgb(13, 230, 49);
+} 
+
+.playlist li{
+    padding: 10px 0;
+}
+
+/* BOT SIDE */
+.bot-side{
+    padding: 0 18px;
+}
+
+.bot-side span img{
+    width: 1rem ;
+    margin-right: 10px;
+}
+
+.bot-side span.download{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(113, 113, 113);
+}
+
+.bot-side #username{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.bot-side #username:hover{
+    transform: scale(1.02);
+}
+
+span.user-pic-container{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(133, 133, 133);
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+span.user-pic-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /************************************************************
 MAIN-CONTENT
 *************************************************************/
+.upgrade{
+    height: 90px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+}
+
 .main-content{
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
@@ -248,13 +357,10 @@ footer{
 /* LEFT ****************************************** */
 
 .current-song-album{
-    max-width: 42px;
-    max-height: 42px;
+    width: 45px;
 }
 
 .current-song-album img{
-    object-fit: cover;
-    height: 100%;
     width: 100%;
 }
 
