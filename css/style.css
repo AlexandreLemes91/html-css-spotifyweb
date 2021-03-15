@@ -21,6 +21,10 @@ li{
     list-style: none;
 }
 
+.not-display{
+    display: none;
+}
+
 /* HOVER *******************************/
 .li-become li{
     transition: 0.3s;
@@ -72,8 +76,6 @@ li{
     opacity: 1;
 }
 
-
-
 /* TEXT ******************************/
 h1,
 h2,
@@ -124,6 +126,7 @@ MAIN
 main{
     display: flex;
     height: calc(100vh - 90px);
+    overflow-y: hidden;
 }
 
 
@@ -137,6 +140,7 @@ aside{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 /* TOP SIDE */
@@ -157,7 +161,7 @@ aside .logo{
     border-color:  rgb(13, 230, 49);
 }
 
-.li-img-link li > div{
+.img-25{
     width: 25px;
     margin-right: 5px;
 }
@@ -200,39 +204,39 @@ aside .logo{
     padding: 0 18px;
 }
 
-.bot-side span img{
+.bot-side .download img{
     width: 1rem ;
     margin-right: 10px;
 }
 
-.bot-side span.download{
+.bot-side .download{
     display: flex;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid rgb(113, 113, 113);
 }
 
-.bot-side #username{
+.bot-side .username{
     padding: 10px 0;
     display: flex;
     align-items: center;
 }
 
-.bot-side #username:hover{
+.bot-side .username:hover{
     transform: scale(1.02);
 }
 
-span.user-pic-container{
+.user-pic-container{
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: rgb(133, 133, 133);
     overflow: hidden;
     margin-right: 10px;
 }
 
-span.user-pic-container img{
+.user-pic-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -244,21 +248,40 @@ MAIN-CONTENT
 .upgrade{
     height: 90px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, .6);
     position: absolute;
     top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upgrade a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin-right: 30px;
+}
+
+.upgrade a:hover{
+    transform: scale(1.04);
+}
+
+.scrollable{ 
+    overflow-y: auto;
+    padding: 100px 20px 0;
 }
 
 .main-content{
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
     background-color: rgb(20, 25, 34);
     height: 100%;
     flex-basis: calc(100vw - 230px);
     align-items: center;
-    overflow-y: auto;
 }
 
 .link-list ul{
@@ -440,7 +463,7 @@ footer{
     height: 3px;
     border-radius: 5px;
     background-color: rgb(113, 113, 113);
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 
 .bar-progression{

@@ -1,0 +1,58 @@
+@media screen and (max-width: 600px){
+    .xs-hidden{
+        display: none;
+    }
+
+    .xs-hidden-span span{
+        display: none;
+    }
+
+    .xs-display{
+        display: block;
+    }
+
+    /************************************************************
+    ASIDE
+    *************************************************************/
+    aside{
+        flex-basis: 50px;
+    }
+
+    .xs-logo{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .aside-link{
+        margin-top: 10px;
+    }
+
+    .aside-link li{
+        flex-grow: 1;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .bot-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bot-side .download{
+        border-bottom: transparent;
+    }
+
+    .bot-side .username{
+        justify-content: center;
+    }
+
+    /************************************************************
+    MAIN-CONTENT
+    *************************************************************/
+    .main-content{
+        flex-basis: calc(100vw - 50px);
+        align-items: center;
+        overflow-y: auto;
+    }
+}
